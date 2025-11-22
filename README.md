@@ -17,7 +17,7 @@ Designed for **research**, **reproducibility**, and **dynamic customization** of
 
 ## 🔧 Features
 
-* **Unified EMG dataset class (`EMG`)**
+* **Unified EMG dataset class (`EMG`)**  
   Load, clean, preprocess, segment, and extract features — all from one object.
 
 * **Flexible segmentation/windowing**
@@ -60,10 +60,11 @@ pip install -e .
 Requires:
 
 * Python ≥ 3.9
-* NumPy, SciPy
+* NumPy, SciPy, scikit-learn
 * TensorFlow ≥ 2.10 (Requires Python 3.10)
-* scikit-learn
 * Matplotlib, Seaborn (optional)
+* tqdm (optional)
+* h5py (loading .mat files)
 
 ---
 
@@ -202,20 +203,24 @@ emg_hgc/
 │
 ├── data/
 │   ├── emg_dataset.py      # EMG class
+│   ├── preprocessing.py    
 │   ├── tensor_data.py      # TensorFlow dataset wrapper
-│   ├── logger.py           # Experiment logging
+│   ├── windowing.py      # TensorFlow dataset wrapper
 │
 ├── features/
+│   ├── aggregation.py
 │   ├── extractors.py       # FEMs (TAP, MAV, ZCR, etc.)
-│   ├── utils.py
+│   ├── heuristics.py
 │
 ├── models/
 │   ├── cnn.py              # CNN architectures
 │   ├── hpo.py              # KerasTuner utilities
 │
 ├── utils/
-│   ├── labeling.py
 │   ├── array_ops.py
+│   ├── labeling.py
+│   ├── logger.py           # Experiment logging
+│   ├── plotting.py
 │
 └── README.md               # ← You are here
 ```

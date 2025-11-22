@@ -1,0 +1,21 @@
+[project]
+name = "emg_hgc"
+version = "1.0.0"
+description = "A Python module for EMG Hand Gesture Classification."
+authors = [{name="Felicity", email="fhe2@email"}]
+requires-python = ">=3.9"
+
+dependencies = [
+  "numpy",
+  "scipy",
+  "scikit-learn",
+  "matplotlib",
+  "seaborn",
+  "tensorflow>=2.11",
+  "tqdm",
+  "h5py"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
