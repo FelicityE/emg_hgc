@@ -9,7 +9,7 @@ __version__ = "1.0"
 # Re-export main classes for convenience
 from .data.emg_dataset import EMG
 from .data.tensor_data import TFData
-from .utils.logger import Logger
+from .utils.logging import Logger
 
 from .features import extractors
 
