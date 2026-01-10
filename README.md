@@ -5,11 +5,11 @@
 
 A Python module for **EMG Hand Gesture Classification (HGC)** with a pipeline for:
 
-* EMG dataset loading
-* Preprocessing & segmentation
-* Feature extraction
-* Aggregation into model-ready tensors
-* Training & hyperparameter optimization for CNN-based gesture models
+* EMG dataset loading.
+* Preprocessing & segmentation.
+* Feature extraction.
+* Aggregation into model-ready matrices.
+* Training & hyperparameter optimization for CNN-based gesture models.
 
 Designed for **research**, **reproducibility**, and **dynamic customization** of EMG workflows.
 
@@ -26,26 +26,26 @@ Designed for **research**, **reproducibility**, and **dynamic customization** of
   * (TBD) Fixed-size windows
   * (TBD) Changepoint-based segmentation
   * (TBD) Rolling windows
-  * Dynamic/target segmentation for model-ready features
+  * Dynamic target segmentation for model-ready features
 
-* **Feature extraction engine**
+* **Feature extraction**
 
-  * Supports single or multiple FEMs
-  * Built-in feature extractors (e.g., TAP features)
-  * Easily extendable with user-defined FEM modules
+  * Supports single or multiple feature extraction methods.
+  * Built-in FEMs.
+  * Extendablility with user-defined FEM modules.
 
 * **TensorFlow-ready datasets (`TFData`)**
 
-  * Shuffling, reshaping, stratified splitting
-  * Category encoding for gesture classes
-  * Ready-to-train `(X, Y)` pairs
+  * Shuffling, reshaping, and splitting.
+  * Category encoding for gesture classes.
+  * Ready-to-train `(X, Y)` pairs.
 
 * **Modeling utilities**
 
-  * Hyperparameter tuner (`HPT`)
-  * CNN model builder (`Model`)
-  * Training, validation, and test routines
-  * Logging & experiment tracking
+  * Hyperparameter tuner (`HPT`).
+  * CNN model builder (`Model`).
+  * Training, validation, and testing.
+  * Logging & experiment tracking.
 
 ---
 
@@ -59,9 +59,9 @@ pip install -e .
 
 Requires:
 
-* Python ≥ 3.9
+* Python 3.10
 * NumPy, SciPy, scikit-learn
-* TensorFlow ≥ 2.10 (Requires Python 3.10)
+* TensorFlow 2.10 (Requires Python 3.10)
 * Matplotlib, Seaborn (optional)
 * tqdm (optional)
 * h5py (loading .mat files)
@@ -70,7 +70,7 @@ Requires:
 
 # 🚀 Quick Start Example
 
-Below is a complete example of loading EMG data, preprocessing, windowing, extracting features, preparing TensorFlow datasets, running hyperparameter tuning, training a CNN, and logging results.
+Below is a complete example for loading EMG data, preprocessing, windowing, extracting features, preparing TensorFlow datasets, running hyperparameter tuning, training a CNN, and logging results.
 
 ---
 
